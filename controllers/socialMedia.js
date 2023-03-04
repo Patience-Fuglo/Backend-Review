@@ -3,8 +3,8 @@ const SocialMedia = require("../models/socialMedia");
 
 router.get("/", async (req, res) => {
   try {
-    const socialMedia = await SocialMedia.find();
-    res.json(socialMedia);
+    const socialMedias = await SocialMedia.find();
+    res.json(socialMedias);
   } catch (error) {
     console.log(error);
     res.status(400).json({ message: "error retrieving resource" });
